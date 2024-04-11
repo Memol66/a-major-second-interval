@@ -1,0 +1,26 @@
+import numpy as np
+from scipy.io.wavfile import write
+
+# Sampling frequency (samples per second)
+fs = 44100
+
+# Duration of the sound (seconds)
+duration = 2
+
+# Frequency of the major second interval (Hz)
+f = 440 * 2**(2/12)
+
+# Time array
+t = np.linspace(0, duration, int(fs * duration), endpoint=False)
+
+# Generate the sound wave with the specified frequency
+y = np.sin(2 * np.pi * f * t)
+
+# Normalize the sound wave
+y = y / np.max(np.abs(y))
+
+# Scale the sound wave to 16-bit integers (-32768 to 32767)
+y_int = np.int16(y * 32767)
+
+# Save the sound wave to a WAV file
+write('major_second.wav', fs, y_int)
