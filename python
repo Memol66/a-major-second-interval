@@ -1,10 +1,10 @@
 import numpy as np
 from scipy.io.wavfile import write
 
-# Sampling frequency (samples per second)
+# Sampling frequency (samples per second).
 fs = 44100
 
-# Duration of the sound (seconds)
+# Duration of the sound (seconds);
 duration = 2
 
 # Frequency of the major second interval (Hz)
