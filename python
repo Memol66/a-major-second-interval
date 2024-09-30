@@ -1,7 +1,8 @@
+# 3333333333333333333333333
 import numpy as np
 from scipy.io.wavfile import write
 
-# Sampling frequency (samples per second).3333333333333333333333333
+# Sampling frequency (samples per second).
 fs = 44100
 
 # Duration of the sound (seconds);
